@@ -28,6 +28,8 @@ repositories {
 dependencies {
     implementation ('org.springframework.boot:spring-boot-starter-web')
     implementation ('org.projectlombok:lombok')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa') //스프링부트 버전에 맞춰 자동으로 JPA 관련 라이브러리들의 버전을 관리해 줌
+    implementation('com.h2database:h2') // 별도의 설치가 필요 없이 프로젝트 의존성으로 관리할 수 있다. 앱이 재시작할 때마다 초기화 되어서 테스트 용도로 적합함
     annotationProcessor('org.projectlombok:lombok')
     testImplementation('org.projectlombok:lombok')
     testImplementation ('org.springframework.boot:spring-boot-starter-test')
