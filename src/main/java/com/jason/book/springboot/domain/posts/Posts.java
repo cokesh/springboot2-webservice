@@ -1,6 +1,7 @@
 package com.jason.book.springboot.domain.posts;
 
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
@@ -8,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Getter
 @NoArgsConstructor
 @Entity // @Entity 어노테이션은 JPA의 어노테이션이거 @NoArgsConstructor는 롬복의 어노테이션이다. 롬복 어노테이션은 필수 어노테이션이 아니므로 JPA어노테이션을 클래스와 가깝게 두고 롬복어노테이션을 그 위에 둠. 후에 코틀린같은 새언어로 전환할시에 롬복어노테이션들을 쉽게 삭제가능하다. / 테이블과 링크될 클래스임 / 기본값으로 카멜케이스를 언더스코어 네이밍으로 테이블명으로 매칭함
 public class Posts {
